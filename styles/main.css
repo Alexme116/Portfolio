@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* ------------ Header ------------ */
+
+header {
+    width: 100%;
+    position: fixed;
+}
+
+.nav {
+    display: grid;
+    background-color: rgb(8, 46, 90);
+    grid-template-columns: repeat(3, 1fr);
+    padding: 15px;
+}
+
+.logo {
+    margin-left: 5%;
+}
+
+.logo_img{
+    width: 55px;
+}
+
+.titulo {
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none;
+    justify-self: center;
+    align-self: center;
+    color: rgba(109, 216, 66, 0.815);
+    transition: 0.2s;
+}
+
+.titulo:hover{
+    cursor: pointer;
+    font-size: 35px;
+    transition: all 0.15s;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu li{
+    list-style: none;
+    justify-self: center;
+    align-self: center;
+}
+
+.menu li a{
+    color: rgba(109, 216, 66, 0.815);
+    text-decoration: none;
+}
+
+.menu li a:hover{
+    padding: 3px 6px;
+    background-color: rgba(137, 255, 137, 0.767);
+    border-radius: 15px;
+    color: black;
+}
+
+.hr_menu {
+    border: 1px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* ------------ About Me ------------ */
+.container_about_me {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(67, 162, 190);
+    color: black;
+    padding: 30px 0px 40.1px 0px;
+    border-bottom: 1px solid rgba(0, 204, 255, 0.8);
+    box-shadow: 0 0 5px 2px rgba(0, 247, 255, 0.6);
+    padding-top: 130px;
+}
+
+.title_section {
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.about_me{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom_about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pais {
+    width: 70px;
+    padding-left: 10px;
+}
+
+.tec {
+    padding-left: 10px;
+    width: 50px;
+}
+
+.content {
+    display: flex;
+    justify-content: right;
+}
+
+.mi_foto {
+    margin-top: 0px;
+    width: 100px;
+}
+
+.nombre {
+    text-align: center;
+}
+
+/* ------------ Languages ------------ */
+
+.container_languages {
+    background-color: rgba(111, 203, 231, 0.26);
+    color: black;
+    padding: 30px 0px 40.1px 0px;
+}
+
+.languages {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: repeat(2, 225px);
+    grid-gap: 50px 100px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.language {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0px 10px 0px;
+    background-color: rgba(52, 159, 185, 0.3);
+    width: 160px;
+    height: 265px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 225, 255, 0.5);
+}
+
+.language_img {
+    width: 150px;
+}
+
+.button_language {
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button_language:hover {
+    background-color: rgb(0, 76, 95);
+    color: rgb(0, 255, 234);
+}
+
+/* ------------ Contact ------------ */
+
+.container_contact {
+    background-color: rgba(111, 203, 231, 0.636);
+    padding: 30px 0px 40.1px 0px;
+    box-shadow: 0 0 5px 1px rgba(6, 156, 161, 0.741);
+}
+
+.separation_contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact_img {
+    width: 200px;
+    margin-right: 20px;
+}
+
+.contact_form {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contact_data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px 20%;
+}
+
+.input_contact {
+    background-color: rgba(221, 244, 247, 0.81);
+    border: 1px solid rgba(81, 82, 82, 0.8);
+    border-radius: 5px;
+    width: 280px;
+    padding: 3px;
+}
+
+.input_contact input {
+    padding: 50px;
+    border: none;
+    border-radius: 5px;
+}
+
+.input_message {
+    height: 200px;
+    max-width: 716px;
+    max-height: 200px;
+    min-width: 716px;
+    min-height: 200px;
+}
+
+.button_contact {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.219);
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: black;
+}
+
+.button_contact:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: black;
+}
