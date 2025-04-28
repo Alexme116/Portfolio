@@ -1,14 +1,23 @@
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
-import Home from "./components/Home/Home"
-import Dashboard from './components/Dashboard/Dashboard'
+import NavBar from './components/NavBar/NavBar'
+import Home from './components/Home/Home'
+import About from './components/About/About'
+import Projects from './components/Projects/Projects'
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/dashboard" element={<Dashboard/>}/>
-    </Routes>
+    <div className='relative w-svw h-svh overflow-auto bg-[#130824]'>
+      {/* NavBar */}
+      <NavBar/>
+
+      {/* Displays */}
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/projects" element={<Projects/>}/>
+      </Routes>
+    </div>
   )
 }
 
