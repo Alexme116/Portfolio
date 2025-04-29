@@ -22,7 +22,6 @@ export default function NavBar() {
 
     const handleNavigate = (path) => {
         navigate(path)
-        setShowMenu(false)
     }
 
     useEffect(() => {
@@ -42,10 +41,13 @@ export default function NavBar() {
     })
 
     return (
-        <div className="font-montserrat fixed z-10 w-full flex justify-between items-center bg-transparent py-5 px-10 text-white">
+        <div
+            className="font-montserrat fixed z-10 w-full flex justify-between items-center bg-transparent py-5 px-10 text-white
+            max-lg:px-5"
+        >
             {/* Logo Name */}
             <button onClick={() => handleNavigate("/")}>
-                <h1 className="font-bold text-xl tracking-[-1px]">ALEXME</h1>
+                <h1 className="font-bold text-xl tracking-[-1px] max-lg:text-lg">ALEXME</h1>
             </button>
 
             {/* Desktop Navigation */}
@@ -74,27 +76,50 @@ export default function NavBar() {
             {/* Mobile Menu Button */}
             {isDevice != "Pc" && (
                 <button onClick={() => setShowMenu(!showMenu)}>
-                    <MenuIcon color="white" h={30} w={30} />
+                    <MenuIcon color="white" h={25} w={25} />
                 </button>
             )}
 
             {/* Mobile Menu Content */}
             {isDevice != "Pc" && showMenu && (
-                <div className="absolute top-20 right-10 bg-[#1a1a1a] p-5 rounded-lg flex flex-col gap-5 text-lg">
+                <div
+                    className="absolute z-30 top-16 right-5 bg-[#1a1a1a] p-5 rounded-lg flex flex-col gap-5 text-lg
+                    max-lg:p-2 max-lg:gap-4"
+                >
                     <button onClick={() => handleNavigate("/")}>
-                        <h1 className={`${actualWindow == "/" ? "text-[#ffffff]" : "text-[#9b9b9b]"}`}>HOME</h1>
+                        <h1 className={`${actualWindow == "/" ? "text-[#ffffff]" : "text-[#9b9b9b]"}
+                            max-lg:text-sm`}>
+                            HOME
+                        </h1>
                     </button>
                     <button onClick={() => handleNavigate("/about")}>
-                        <h1 className={`${actualWindow == "/about" ? "text-[#ffffff]" : "text-[#9b9b9b]"}`}>ABOUT</h1>
+                        <h1 className={`${actualWindow == "/about" ? "text-[#ffffff]" : "text-[#9b9b9b]"}
+                            max-lg:text-sm`}>
+                            ABOUT
+                        </h1>
                     </button>
                     <button onClick={() => handleNavigate("/projects")}>
-                        <h1 className={`${actualWindow == "/projects" ? "text-[#ffffff]" : "text-[#9b9b9b]"}`}>PROJECTS</h1>
+                        <h1 className={`${actualWindow == "/projects" ? "text-[#ffffff]" : "text-[#9b9b9b]"}
+                            max-lg:text-sm`}>
+                            PROJECTS
+                        </h1>
                     </button>
-                    <button className="flex items-center gap-2 p-2 rounded-tr-lg rounded-bl-lg bg-[#6b2de6] mt-2">
-                        <RightArrowIcon color="white" h={20} w={20} />
+                    <button
+                        className="flex items-center gap-2 p-2 rounded-tr-lg rounded-bl-lg bg-[#6b2de6] mt-2
+                        max-lg:p-1 max-lg:text-sm max-lg:gap-1"
+                    >
+                        <RightArrowIcon color="white" h={15} w={15} />
                         <h1 className="font-bold">CONTACT ME</h1>
                     </button>
                 </div>
+            )}
+
+            {/* Button Hide Menu */}
+            {showMenu && (
+                <button
+                    className="absolute z-20 h-svh w-svw top-0 left-0"
+                    onClick={() => setShowMenu(false)}
+                />
             )}
         </div>
     )
