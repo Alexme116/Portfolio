@@ -42,7 +42,7 @@ export default function NavBar() {
 
     return (
         <div
-            className="font-montserrat fixed z-10 w-full flex justify-between items-center bg-transparent py-5 px-10 text-white
+            className="font-montserrat w-full flex justify-between items-center bg-transparent py-5 px-10 text-white
             max-lg:px-5"
         >
             {/* Logo Name */}

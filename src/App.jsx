@@ -4,20 +4,20 @@ import Home from './components/Home/Home'
 import About from './components/About/About'
 import Projects from './components/Projects/Projects'
 
-function App() {
+export default function App() {
   return (
-    <div className='relative w-svw h-svh overflow-auto'>
+    <div className='w-svw h-svh flex flex-col'>
       {/* NavBar */}
       <NavBar/>
 
       {/* Displays */}
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/about" element={<About/>}/>
-        <Route path="/projects" element={<Projects/>}/>
-      </Routes>
+      <div className='flex-1 overflow-auto'>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/about" element={<About/>}/>
+          <Route path="/projects" element={<Projects/>}/>
+        </Routes>
+      </div>
     </div>
   )
 }
-
-export default App
