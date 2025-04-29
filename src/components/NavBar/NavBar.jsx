@@ -83,7 +83,7 @@ export default function NavBar() {
             {/* Mobile Menu Content */}
             {isDevice != "Pc" && showMenu && (
                 <div
-                    className="absolute z-30 top-16 right-5 bg-[#1a1a1a] p-5 rounded-lg flex flex-col gap-5 text-lg
+                    className="absolute z-50 top-16 right-5 bg-[#1a1a1a] p-5 rounded-lg flex flex-col gap-5 text-lg
                     max-lg:p-2 max-lg:gap-4"
                 >
                     <button onClick={() => handleNavigate("/")}>
@@ -117,7 +117,7 @@ export default function NavBar() {
             {/* Button Hide Menu */}
             {showMenu && (
                 <button
-                    className="absolute z-20 h-svh w-svw top-0 left-0"
+                    className="absolute z-40 h-svh w-svw top-0 left-0"
                     onClick={() => setShowMenu(false)}
                 />
             )}
