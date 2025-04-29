@@ -86,24 +86,30 @@ export default function NavBar() {
                     className="absolute z-50 top-16 right-5 bg-[#1a1a1a] p-5 rounded-lg flex flex-col gap-5 text-lg
                     max-lg:p-2 max-lg:gap-4"
                 >
-                    <button onClick={() => handleNavigate("/")}>
-                        <h1 className={`${actualWindow == "/" ? "text-[#ffffff]" : "text-[#9b9b9b]"}
-                            max-lg:text-sm`}>
-                            HOME
-                        </h1>
-                    </button>
-                    <button onClick={() => handleNavigate("/about")}>
-                        <h1 className={`${actualWindow == "/about" ? "text-[#ffffff]" : "text-[#9b9b9b]"}
-                            max-lg:text-sm`}>
-                            ABOUT
-                        </h1>
-                    </button>
-                    <button onClick={() => handleNavigate("/projects")}>
-                        <h1 className={`${actualWindow == "/projects" ? "text-[#ffffff]" : "text-[#9b9b9b]"}
-                            max-lg:text-sm`}>
-                            PROJECTS
-                        </h1>
-                    </button>
+                    <div className="w-full flex justify-center">
+                        <button onClick={() => handleNavigate("/")}>
+                            <h1 className={`${actualWindow == "/" ? "text-[#ffffff]" : "text-[#9b9b9b]"}
+                                max-lg:text-sm`}>
+                                HOME
+                            </h1>
+                        </button>
+                    </div>
+                    <div className="w-full flex justify-center">
+                        <button onClick={() => handleNavigate("/about")}>
+                            <h1 className={`${actualWindow == "/about" ? "text-[#ffffff]" : "text-[#9b9b9b]"}
+                                max-lg:text-sm`}>
+                                ABOUT
+                            </h1>
+                        </button>
+                    </div>
+                    <div className="w-full flex justify-center">
+                        <button onClick={() => handleNavigate("/projects")}>
+                            <h1 className={`${actualWindow == "/projects" ? "text-[#ffffff]" : "text-[#9b9b9b]"}
+                                max-lg:text-sm`}>
+                                PROJECTS
+                            </h1>
+                        </button>
+                    </div>
                     <button
                         className="flex items-center gap-2 p-2 rounded-tr-lg rounded-bl-lg bg-[#6b2de6] mt-2
                         max-lg:p-1 max-lg:text-sm max-lg:gap-1"
