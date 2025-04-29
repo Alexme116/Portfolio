@@ -26,9 +26,9 @@ export default function NavBar() {
 
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth > 1024) {
+            if (window.innerWidth > 1023) {
                 setIsDevice('Pc');
-            } else if (window.innerWidth > 600 && window.innerWidth <= 1024) {
+            } else if (window.innerWidth > 600 && window.innerWidth <= 1023) {
                 setIsDevice('Tablet');
             } else {
                 setIsDevice('Mobile');
