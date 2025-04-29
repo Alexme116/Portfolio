@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
-import RightArrowIcon from "../Icons/Icons"
+import { RightArrowIcon, MenuIcon } from "../Icons/Icons"
 
 export default function NavBar() {
     const [actualWindow, setActualWindow] = useState("/")
+    const [isDevice, setIsDevice] = useState("Pc")
+    const [showMenu, setShowMenu] = useState(false)
     const navigate = useNavigate()
 
     const checkWindow = (path) => {
@@ -18,47 +20,82 @@ export default function NavBar() {
         }
     }
 
+    const handleNavigate = (path) => {
+        navigate(path)
+        setShowMenu(false)
+    }
+
     useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 1024) {
+                setIsDevice('Pc');
+            } else if (window.innerWidth > 600 && window.innerWidth <= 1024) {
+                setIsDevice('Tablet');
+            } else {
+                setIsDevice('Mobile');
+            }
+        }
+
         checkWindow(window.location.pathname)
+        window.addEventListener('resize', handleResize);
+        handleResize();
     })
 
     return (
-        <div className="fixed z-10 w-full flex justify-between items-center bg-transparent py-5 px-10 text-white">
+        <div className="font-montserrat fixed z-10 w-full flex justify-between items-center bg-transparent py-5 px-10 text-white">
             {/* Logo Name */}
-            <button onClick={() => navigate("/")}>
-                <h1 className="font-bold text-xl text-">ALEXME</h1>
+            <button onClick={() => handleNavigate("/")}>
+                <h1 className="font-bold text-xl tracking-[-1px]">ALEXME</h1>
             </button>
 
-            {/* Navigations */}
-            <div className="flex gap-10 text-lg">
-                {/* Home Button */}
-                <button onClick={() => navigate("/")}>
-                    <h1 className={`${actualWindow == "/" ? "text-[#ffffff]" : "text-[#ffffff67]"}`}>
-                        HOME
-                    </h1>
-                </button>
-                {/* About Button */}
-                <button onClick={() => navigate("/about")}>
-                    <h1 className={`${actualWindow == "/about" ? "text-[#ffffff]" : "text-[#ffffff67]"}`}>
-                        ABOUT
-                    </h1>
-                </button>
-                {/* Projects Button */}
-                <button onClick={() => navigate("/projects")}>
-                    <h1 className={`${actualWindow == "/projects" ? "text-[#ffffff]" : "text-[#ffffff67]"}`}>
-                        PROJECTS
-                    </h1>
-                </button>
-            </div>
+            {/* Desktop Navigation */}
+            {isDevice == "Pc" && (
+                <div className="flex gap-10 text-lg">
+                    <button onClick={() => handleNavigate("/")}>
+                        <h1 className={`${actualWindow == "/" ? "text-[#ffffff]" : "text-[#9b9b9b]"}`}>HOME</h1>
+                    </button>
+                    <button onClick={() => handleNavigate("/about")}>
+                        <h1 className={`${actualWindow == "/about" ? "text-[#ffffff]" : "text-[#9b9b9b]"}`}>ABOUT</h1>
+                    </button>
+                    <button onClick={() => handleNavigate("/projects")}>
+                        <h1 className={`${actualWindow == "/projects" ? "text-[#ffffff]" : "text-[#9b9b9b]"}`}>PROJECTS</h1>
+                    </button>
+                </div>
+            )}
 
-            {/* Contact Button */}
-            <button className="flex items-center gap-2 p-2 rounded-tr-lg rounded-bl-lg bg-[#6b2de6]">
-                {/* Arrow */}
-                <RightArrowIcon color="white" h={20} w={20} />
+            {/* Desktop Contact Button */}
+            {isDevice == "Pc" && (
+                <button className="flex items-center gap-2 p-2 rounded-tr-lg rounded-bl-lg bg-[#6b2de6]">
+                    <RightArrowIcon color="white" h={20} w={20} />
+                    <h1 className="font-bold">CONTACT ME</h1>
+                </button>
+            )}
 
-                {/* Text */}
-                <h1 className="font-bold">CONTACT ME</h1>
-            </button>
+            {/* Mobile Menu Button */}
+            {isDevice != "Pc" && (
+                <button onClick={() => setShowMenu(!showMenu)}>
+                    <MenuIcon color="white" h={30} w={30} />
+                </button>
+            )}
+
+            {/* Mobile Menu Content */}
+            {isDevice != "Pc" && showMenu && (
+                <div className="absolute top-20 right-10 bg-[#1a1a1a] p-5 rounded-lg flex flex-col gap-5 text-lg">
+                    <button onClick={() => handleNavigate("/")}>
+                        <h1 className={`${actualWindow == "/" ? "text-[#ffffff]" : "text-[#9b9b9b]"}`}>HOME</h1>
+                    </button>
+                    <button onClick={() => handleNavigate("/about")}>
+                        <h1 className={`${actualWindow == "/about" ? "text-[#ffffff]" : "text-[#9b9b9b]"}`}>ABOUT</h1>
+                    </button>
+                    <button onClick={() => handleNavigate("/projects")}>
+                        <h1 className={`${actualWindow == "/projects" ? "text-[#ffffff]" : "text-[#9b9b9b]"}`}>PROJECTS</h1>
+                    </button>
+                    <button className="flex items-center gap-2 p-2 rounded-tr-lg rounded-bl-lg bg-[#6b2de6] mt-2">
+                        <RightArrowIcon color="white" h={20} w={20} />
+                        <h1 className="font-bold">CONTACT ME</h1>
+                    </button>
+                </div>
+            )}
         </div>
     )
 }

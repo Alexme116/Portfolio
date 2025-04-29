@@ -7,7 +7,7 @@ import Projects from './components/Projects/Projects'
 
 function App() {
   return (
-    <div className='relative w-svw h-svh overflow-auto bg-[#130824]'>
+    <div className='relative w-svw h-svh overflow-auto bg-[#0a0413]'>
       {/* NavBar */}
       <NavBar/>
 
