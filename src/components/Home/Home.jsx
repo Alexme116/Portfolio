@@ -3,7 +3,7 @@ import SoftwareDevImage from '../../assets/Image/SoftwareDevImage.png';
 export default function Home() {
     return (
         <div className="relative w-full h-full text-white">
-            <div className='relative w-full h-full flex 2xl:items-center'>
+            <div className='relative w-full h-full flex xl:items-center'>
                 {/* Text & Image Section */}
                 <div className='font-montserrat w-full flex flex-col justify-between
                     h-full max-2xl:h-[90%] max-xl:h-[80%] max-lg:h-[70%] max-md:h-[60%] max-sm:h-[45%]'
