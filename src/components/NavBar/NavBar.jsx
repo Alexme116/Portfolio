@@ -42,8 +42,8 @@ export default function NavBar() {
 
     return (
         <div
-            className="font-montserrat w-full flex justify-between items-center bg-transparent py-5 px-10 text-white
-            max-lg:px-5"
+            className="font-montserrat w-full flex justify-between items-center bg-transparent py-5 text-white
+            px-10 max-lg:px-5"
         >
             {/* Logo Name */}
             <button onClick={() => handleNavigate("/")}>

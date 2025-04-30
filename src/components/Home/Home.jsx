@@ -2,24 +2,27 @@ import SoftwareDevImage from '../../assets/Image/SoftwareDevImage.png';
 
 export default function Home() {
     return (
-        <div className="relative w-full h-full text-white">
-            <div className='relative w-full h-full flex'>
+        <div className="relative w-full h-full text-white
+            p-10 max-lg:p-5"
+        >
+            {/* First Section Image */}
+            <div className='relative w-full'>
                 {/* Text & Image Section */}
                 <div className='font-montserrat w-full flex flex-col justify-between
-                    h-full max-2xl:h-[90%] max-xl:h-[80%] max-lg:h-[70%] max-md:h-[60%] max-sm:h-[45%]'
+                    h-[50rem] max-2xl:h-[42rem] max-xl:h-[40rem] max-lg:h-[35rem] max-md:h-[28rem] max-sm:h-[16.9rem]'
                 >
                     {/* Text */}
                     <h1
                         className="z-30 font-bold text-start
-                        text-[10rem] max-2xl:text-[9rem] max-xl:text-[8rem] max-lg:text-[7rem] max-md:text-[5rem] max-sm:text-[3rem]
+                        text-[10rem] max-2xl:text-[8rem] max-xl:text-[6.5rem] max-lg:text-[5.2rem] max-md:text-[4rem] max-sm:text-[2.5rem]
                         tracking-[-30px] max-2xl:tracking-[-20px] max-xl:tracking-[-18px] max-lg:tracking-[-13px] max-md:tracking-[-10px] max-sm:tracking-[-4px]"
                     >
                         SOFTWARE
                     </h1>
                     <h1
                         className="z-30 font-bold text-end
-                        pr-[32px] max-2xl:pr-[20px] max-xl:pr-[18px] max-lg:pr-[14px] max-md:pr-[11px] max-sm:pr-[5px]
-                        text-[10rem] max-2xl:text-[9rem] max-xl:text-[8rem] max-lg:text-[7rem] max-md:text-[5rem] max-sm:text-[3rem]
+                        pr-[32px] max-2xl:pr-[20px] max-xl:pr-[18px] max-lg:pr-[10px] max-md:pr-[9px] max-sm:pr-[5px]
+                        text-[10rem] max-2xl:text-[8rem] max-xl:text-[6.5rem] max-lg:text-[5.2rem] max-md:text-[4rem] max-sm:text-[2.5rem]
                         tracking-[-30px] max-2xl:tracking-[-20px] max-xl:tracking-[-18px] max-lg:tracking-[-13px] max-md:tracking-[-10px] max-sm:tracking-[-4px]"
                     >
                         DEVELOPER
@@ -27,11 +30,10 @@ export default function Home() {
                 </div>
 
                 {/* Image */}
-                <div className='absolute z-20 top-0 left-0 w-full flex justify-center h-full'>
+                <div className='absolute z-20 top-0 left-0 w-full flex justify-center'>
                     <div className="overflow-hidden flex justify-center items-center
-                        w-[40%] max-2xl:w-[50%] max-xl:w-[55%] max-lg:w-[60%] max-md:w-[65%] max-sm:w-[70%]
-                        h-full max-2xl:h-[90%] max-xl:h-[80%] max-lg:h-[70%] max-md:h-[60%] max-sm:h-[45%]
-                        py-[66px] max-2xl:py-[57px] max-xl:py-[51px] max-lg:py-[44px] max-md:py-[31px] max-sm:py-[18px]"
+                        w-[42.1rem] max-2xl:w-[35.7rem] max-xl:w-[34.88rem] max-lg:w-[30.9rem] max-md:w-[24.9rem] max-sm:w-[15rem]
+                        mt-[4.05rem] max-2xl:mt-[3.18rem] max-xl:mt-[2.58rem] max-lg:mt-[2.1rem] max-md:mt-[1.5rem] max-sm:mt-[0.92rem]"
                     >
                         <img
                         src={SoftwareDevImage}
@@ -40,6 +42,11 @@ export default function Home() {
                         />
                     </div>
                 </div>
+            </div>
+
+            {/* Second Section Important Data */}
+            <div>
+                
             </div>
         </div>
     )
