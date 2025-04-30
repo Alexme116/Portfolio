@@ -47,7 +47,7 @@ export default function NavBar() {
         >
             {/* Logo Name */}
             <button onClick={() => handleNavigate("/")}>
-                <h1 className="font-bold text-xl tracking-[-1px] max-lg:text-lg">ALEXME</h1>
+                <h1 className="font-bold text-xl tracking-[-1px] max-lg:text-lg">ALEXME116</h1>
             </button>
 
             {/* Desktop Navigation */}
