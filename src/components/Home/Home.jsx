@@ -3,7 +3,10 @@ import SecondSectionImportantData from "./SecondSectionImportantData/SecondSecti
 
 export default function Home() {
     return (
-        <div>
+        <div
+            className="h-full w-full flex flex-col
+            lg:justify-center"
+        >
             {/* First Section Image */}
             <FirstSectionImage />
 
