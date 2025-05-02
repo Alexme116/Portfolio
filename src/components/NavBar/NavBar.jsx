@@ -67,7 +67,10 @@ export default function NavBar() {
 
             {/* Desktop Contact Button */}
             {isDevice == "Pc" && (
-                <button className="flex items-center gap-2 p-2 rounded-tr-lg rounded-bl-lg bg-[#6b2de6]">
+                <button
+                    className="flex items-center gap-2 p-2 rounded-tr-lg rounded-bl-lg bg-[#6b2de6]"
+                    onClick={() => handleNavigate("/contact")}
+                >
                     <RightArrowIcon color="white" h={20} w={20} />
                     <h1 className="font-bold">CONTACT ME</h1>
                 </button>
@@ -113,6 +116,7 @@ export default function NavBar() {
                     <button
                         className="flex items-center gap-2 p-2 rounded-tr-lg rounded-bl-lg bg-[#6b2de6] mt-2
                         max-lg:p-1 max-lg:text-sm max-lg:gap-1"
+                        onClick={() => handleNavigate("/contact")}
                     >
                         <RightArrowIcon color="white" h={15} w={15} />
                         <h1 className="font-bold">CONTACT ME</h1>

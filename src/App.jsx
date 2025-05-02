@@ -3,6 +3,7 @@ import NavBar from './components/NavBar/NavBar'
 import Home from './components/Home/Home'
 import About from './components/About/About'
 import Projects from './components/Projects/Projects'
+import Contact from './components/Contact/Contact'
 
 export default function App() {
   return (
@@ -12,11 +13,17 @@ export default function App() {
 
       {/* Displays */}
       <div className='flex-1 overflow-auto'>
+        <div
+          className="relative w-full h-full text-white
+          p-10 max-lg:p-5"
+        >
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/about" element={<About/>}/>
           <Route path="/projects" element={<Projects/>}/>
+          <Route path="/contact" element={<Contact/>}/>
         </Routes>
+        </div>
       </div>
     </div>
   )

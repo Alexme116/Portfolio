@@ -2,7 +2,7 @@
 
 export default function Projects() {
     return (
-        <div className="text-white">
+        <div>
             <h1>Projects</h1>
         </div>
     )

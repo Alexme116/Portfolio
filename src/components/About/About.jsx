@@ -2,7 +2,7 @@
 
 export default function About() {
     return (
-        <div className="text-white">
+        <div>
             <h1>About</h1>
         </div>
     )
