@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import FirstSectionImage from "./FirstSectionImage/FirstSectionImage"
 import SecondSectionImportantData from "./SecondSectionImportantData/SecondSectionImportantData"
 
-export default function Home() {
+export default function Home({ language }) {
     return (
         <div
             className="h-full w-full flex flex-col
@@ -11,7 +12,7 @@ export default function Home() {
             <FirstSectionImage />
 
             {/* Second Section Important Data */}
-            <SecondSectionImportantData />
+            <SecondSectionImportantData language={language} />
         </div>
     )
 }
