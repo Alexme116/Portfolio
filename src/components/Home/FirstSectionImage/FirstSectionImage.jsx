@@ -5,19 +5,19 @@ export default function FirstSectionImage() {
     return (
         <div className='relative w-full'>
             {/* Text & Image Section */}
-            <div className='font-montserrat w-full flex flex-col justify-between
+            <div className='font-montserrat w-full flex flex-col justify-between overflow-hidden
                 h-[50rem] max-2xl:h-[42rem] max-xl:h-[40rem] max-lg:h-[35rem] max-md:h-[28rem] max-sm:h-[16.9rem]'
             >
                 {/* Text */}
                 <h1
-                    className="z-30 font-bold text-start
+                    className="z-30 font-bold text-start animate__animated animate__fadeInLeft
                     text-[10rem] max-2xl:text-[8rem] max-xl:text-[6.5rem] max-lg:text-[5.2rem] max-md:text-[4rem] max-sm:text-[2.5rem]
                     tracking-[-30px] max-2xl:tracking-[-20px] max-xl:tracking-[-18px] max-lg:tracking-[-13px] max-md:tracking-[-10px] max-sm:tracking-[-4px]"
                 >
                     SOFTWARE
                 </h1>
                 <h1
-                    className="z-30 font-bold text-end
+                    className="z-30 font-bold text-end animate__animated animate__fadeInRight
                     pr-[32px] max-2xl:pr-[20px] max-xl:pr-[18px] max-lg:pr-[10px] max-md:pr-[9px] max-sm:pr-[5px]
                     text-[10rem] max-2xl:text-[8rem] max-xl:text-[6.5rem] max-lg:text-[5.2rem] max-md:text-[4rem] max-sm:text-[2.5rem]
                     tracking-[-30px] max-2xl:tracking-[-20px] max-xl:tracking-[-18px] max-lg:tracking-[-13px] max-md:tracking-[-10px] max-sm:tracking-[-4px]"
@@ -35,7 +35,7 @@ export default function FirstSectionImage() {
                     <img
                     src={SoftwareDevImage}
                     alt="SoftDevImage"
-                    className="h-full object-cover"
+                    className="h-full object-cover animate__animated animate__zoomInDown"
                     />
                 </div>
             </div>

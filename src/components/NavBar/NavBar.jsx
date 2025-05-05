@@ -53,7 +53,7 @@ export default function NavBar({ language, setLanguage }) {
 
             {/* Desktop Navigation */}
             {isDevice == "Pc" && (
-                <div className="absolute z-0 top-0 left-0 w-full h-full flex justify-center items-center gap-10 text-lg">
+                <div className="absolute z-0 top-0 left-0 w-full h-full flex justify-center items-center gap-10 text-lg animate__animated animate__flash">
                     <button onClick={() => handleNavigate("/")}>
                         <h1 className={`${actualWindow == "/" ? "text-[#ffffff]" : "text-[#9b9b9b]"}`}>
                             {language == "EN" ? "HOME" : "INICIO"}

@@ -4,7 +4,10 @@
 export default function SecondSectionImportantData({ language }) {
     return (
         <div className="max-lg:flex-1 max-lg:flex max-lg:flex-col max-lg:justify-around">
-            <div className="lg:absolute left-12 top-[32rem]">
+            <div
+                className="lg:absolute left-12 animate__animated animate__zoomIn
+                    top-[55%] max-2xl:top-[60%] max-xl:top-[58%]"
+                >
                 <h1
                     className="font-bold lg:hidden
                     text-[14px] max-lg:text-[18px] max-sm:text-[12px]"
@@ -24,7 +27,10 @@ export default function SecondSectionImportantData({ language }) {
                 </h1>
             </div>
 
-            <div className="lg:absolute lg:right-10 top-[20rem] flex flex-col items-end">
+            <div
+                className="lg:absolute lg:right-10 flex flex-col items-end animate__animated animate__zoomIn
+                    top-[30%] max-2xl:top-[32%] max-xl:top-[35%]"
+                >
                 <h1
                     className="font-bold lg:hidden
                     text-[14px] max-lg:text-[18px] max-sm:text-[12px]"
