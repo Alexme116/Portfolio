@@ -16,17 +16,12 @@ export default function App() {
 
       {/* Displays */}
       <div className='flex-1 overflow-auto'>
-        <div
-          className="relative w-full h-full text-white
-          p-10 max-lg:p-5"
-        >
         <Routes>
           <Route path="/" element={<Home language={language} />}/>
           <Route path="/about" element={<About/>}/>
           <Route path="/projects" element={<Projects/>}/>
           <Route path="/contact" element={<Contact/>}/>
         </Routes>
-        </div>
       </div>
     </div>
   )

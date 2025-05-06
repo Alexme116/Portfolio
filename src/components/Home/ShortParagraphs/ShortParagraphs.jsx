@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 
-export default function SecondSectionImportantData({ language }) {
+export default function ShortParagraphs({ language }) {
     return (
         <div className="max-lg:flex-1 max-lg:flex max-lg:flex-col max-lg:justify-around">
             <div

@@ -1,7 +1,7 @@
 import SoftwareDevImage from '../../../assets/Image/SoftwareDevImage.png';
 
 
-export default function FirstSectionImage() {
+export default function ImageTitle() {
     return (
         <div className='relative w-full'>
             {/* Text & Image Section */}

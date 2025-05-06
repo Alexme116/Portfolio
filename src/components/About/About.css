@@ -1,0 +1,15 @@
+.nameImage {
+    width: 100%;
+    height: 65%;
+    animation: 1s nameHeight ease;
+}
+
+@keyframes nameHeight {
+    0% {
+        height: 70%;
+    }
+    100% {
+        height: 65%;
+    }
+}
+
