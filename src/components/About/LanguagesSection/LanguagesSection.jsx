@@ -26,13 +26,14 @@ export default function LanguagesSection({ language }) {
             className={`w-full
                 lg:transition-all lg:duration-1000
                 max-lg:flex max-lg:flex-col
-                pb-10 max-lg:pb-5
+                pb-7 max-lg:pb-5
                 ${visible ? "flex flex-col opacity-100" : "lg:absolute lg:opacity-0"}`}
         >
             <div className="w-full">
                 <div
                     className="flex flex-col
-                        p-10 max-lg:p-5 pb-0"
+                        p-10 max-lg:p-5
+                        pb-0 max-lg:pb-0"
                 >
                     {/* Label */}
                     <h1 className="text-sm text-[#a7a7a7]">
@@ -52,7 +53,8 @@ export default function LanguagesSection({ language }) {
 
             {/* Languages Carousel */}
             <div
-                className="w-full overflow-hidden whitespace-nowrap mt-10 bg-[#ffffff05] relative group
+                className="w-full overflow-hidden whitespace-nowrap bg-[#ffffff05] relative group
+                    mt-10 max-lg:mt-5
                     py-10 max-lg:py-7"
             >
                 <div className="marquee group-hover:[animation-play-state:paused] inline-block whitespace-nowrap">
