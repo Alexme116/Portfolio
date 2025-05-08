@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { useState, useEffect } from "react"
 import {
     HtmlIcon, CssIcon, JavascriptIcon, TypescriptIcon, ReactIcon, NodeIcon, TailwindIcon,
     PythonIcon, FlaskIcon, DjangoIcon, PostgresqlIcon, MysqlIcon, FirebaseIcon, ViteIcon,
@@ -13,10 +14,20 @@ const icons = [
 
 
 export default function LanguagesSection({ language }) {
+    const [visible, setVisible] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => setVisible(true), 1000);
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <div
-            className="w-full flex flex-col
-                pb-10 max-lg:pb-5"
+            className={`w-full
+                lg:transition-all lg:duration-1000
+                max-lg:flex max-lg:flex-col
+                pb-10 max-lg:pb-5
+                ${visible ? "flex flex-col opacity-100" : "lg:absolute lg:opacity-0"}`}
         >
             <div className="w-full">
                 <div

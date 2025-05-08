@@ -21,8 +21,8 @@ export default function ShortParagraphs({ language }) {
                     max-xl:text-[12px] max-lg:text-[16px] max-sm:text-[10px]"
                 >
                     {language === "EN"
-                        ? "AS A SOFTWARE DEVELOPER I CRAFT CODE THAT POWERS SEAMLESS AND SCALABLE DIGITAL SOLUTIONS."
-                        : "COMO DESARROLLADOR DE SOFTWARE, CREO CÓDIGO QUE IMPULSAN SOLUCIONES DIGITALES SIN PROBLEMAS Y ESCALABLES."}
+                        ? "As a Software Developer I craft code that powers seamless and scalable digital solutions."
+                        : "Como Desarrollador de Software, creo código que impulsan soluciones digitales sin problemas y escalables."}
                     
                 </h1>
             </div>
@@ -44,8 +44,8 @@ export default function ShortParagraphs({ language }) {
                     max-xl:text-[12px] max-lg:text-[16px] max-sm:text-[10px]"
                 >
                     {language === "EN"
-                        ? "I BUILD EFFICIENT, RELIABLE, AND USER-FOCUSED APPLICATIONS THAT MAKE A DIFFERENCE."
-                        : "CREO APLICACIONES EFICIENTES, FIABLES Y PERSONALIZADAS PARA EL USUARIO QUE MARCAN LA DIFERENCIA."}
+                        ? "I build efficient, reliable, and user-focused applications that make a difference."
+                        : "Creo aplicaciones eficientes, fiables y personalizadas para el usuario que marcan la diferencia."}
                 </h1>
             </div>
         </div>

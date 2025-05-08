@@ -9,6 +9,15 @@ export default {
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
       },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+      },
+      animation: {
+        fadeInDelayed: '0.5s fadeIn ease forwards 0.5s',
+      },
     },
   },
   plugins: [],
