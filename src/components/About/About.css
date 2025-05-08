@@ -6,6 +6,13 @@
     }
 }
 
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 30s linear infinite;
+}
+
+
 @keyframes nameHeight {
     0% {
         height: 70%;
@@ -15,3 +22,11 @@
     }
 }
 
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
