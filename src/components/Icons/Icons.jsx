@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { IconArrowNarrowRight, IconMenu2, IconLanguage, IconBrandGithub, IconBrandInstagram, IconBrandLinkedin } from '@tabler/icons-react';
+import { IconArrowNarrowRight, IconMenu2, IconLanguage, IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
 
 export function RightArrowIcon({ color="white", h=undefined, w=undefined  }) {
     return (
@@ -22,12 +22,6 @@ export function TranslateIcon({ color="white", h=undefined, w=undefined  }) {
 export function GithubIcon({ color="white", h=undefined, w=undefined  }) {
     return (
         <IconBrandGithub stroke={2} color={color} height={h} width={w} />
-    )
-}
-
-export function InstagramIcon({ color="white", h=undefined, w=undefined  }) {
-    return (
-        <IconBrandInstagram stroke={2} color={color} height={h} width={w} />
     )
 }
 

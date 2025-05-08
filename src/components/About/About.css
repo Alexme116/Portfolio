@@ -1,7 +1,9 @@
-.nameImage {
-    width: 100%;
-    height: 65%;
-    animation: 1s nameHeight ease;
+@media (min-width: 1024px) {
+    .nameImage {
+        width: 100%;
+        height: 65%;
+        animation: 1s nameHeight ease;
+    }
 }
 
 @keyframes nameHeight {
