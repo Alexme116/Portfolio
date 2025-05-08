@@ -18,7 +18,7 @@ export default function App() {
       <div className='flex-1 overflow-auto'>
         <Routes>
           <Route path="/" element={<Home language={language} />}/>
-          <Route path="/about" element={<About/>}/>
+          <Route path="/about" element={<About language={language} />}/>
           <Route path="/projects" element={<Projects/>}/>
           <Route path="/contact" element={<Contact/>}/>
         </Routes>
