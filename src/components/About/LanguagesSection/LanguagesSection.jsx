@@ -13,7 +13,10 @@ const icons = [
 
 export default function LanguagesSection() {
     return (
-        <div className="w-full flex flex-col">
+        <div
+            className="w-full flex flex-col
+                pb-10 max-lg:pb-5"
+        >
             <div className="w-full">
                 <div
                     className="flex flex-col
@@ -32,7 +35,10 @@ export default function LanguagesSection() {
             </div>
 
             {/* Languages Carousel */}
-            <div className="w-full overflow-hidden whitespace-nowrap mt-10 bg-[#ffffff05] py-10 relative group">
+            <div
+                className="w-full overflow-hidden whitespace-nowrap mt-10 bg-[#ffffff05] relative group
+                    py-10 max-lg:py-7"
+            >
                 <div className="marquee group-hover:[animation-play-state:paused] inline-block whitespace-nowrap">
                     {[...Array(2)].map((_, idx) => (
                         <div key={idx} className="inline-block">
@@ -40,9 +46,15 @@ export default function LanguagesSection() {
                                 icons.map((Icon, i) => (
                                     <div
                                         key={i}
-                                        className="inline-block mx-10 text-white hover:scale-110 transition-transform duration-300"
+                                        className="inline-block text-white hover:scale-110 transition-transform duration-300
+                                            mx-10 max-lg:mx-7"
                                     >
-                                        <Icon color="#6b2de6" w="64px" h="64px" />
+                                        <div
+                                            className=" flex justify-center items-center
+                                                w-16 h-16 max-lg:w-8 max-lg:h-8 "
+                                        >
+                                            <Icon color="#6b2de6" />
+                                        </div>
                                     </div>
                                 ))
                             ))}

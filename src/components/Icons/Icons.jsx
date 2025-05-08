@@ -92,7 +92,7 @@ export function PythonIcon({ color="white", h=undefined, w=undefined  }) {
 
 export function FlaskIcon({ color="white", h=undefined, w=undefined  }) {
     return (
-        <SiFlask color={color} size={60} />
+        <SiFlask color={color} size={"100%"} />
     )
 }
 
@@ -104,7 +104,7 @@ export function DjangoIcon({ color="white", h=undefined, w=undefined  }) {
 
 export function PostgresqlIcon({ color="white", h=undefined, w=undefined  }) {
     return (
-        <BiLogoPostgresql color={color} size={64} />
+        <BiLogoPostgresql color={color} size={"100%"} />
     )
 }
 
@@ -134,12 +134,12 @@ export function BootstrapIcon({ color="white", h=undefined, w=undefined  }) {
 
 export function JavaIcon({ color="white", h=undefined, w=undefined  }) {
     return (
-        <RiJavaLine color={color} size={60} />
+        <RiJavaLine color={color} size={"100%"} />
     )
 }
 
 export function CppIcon({ color="white", h=undefined, w=undefined  }) {
     return (
-        <TbBrandCpp color={color} size={60} />
+        <TbBrandCpp color={color} size={"100%"} />
     )
 }
