@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {
     HtmlIcon, CssIcon, JavascriptIcon, TypescriptIcon, ReactIcon, NodeIcon, TailwindIcon,
     PythonIcon, FlaskIcon, DjangoIcon, PostgresqlIcon, MysqlIcon, FirebaseIcon, ViteIcon,
@@ -11,7 +12,7 @@ const icons = [
 ]
 
 
-export default function LanguagesSection() {
+export default function LanguagesSection({ language }) {
     return (
         <div
             className="w-full flex flex-col
@@ -24,12 +25,16 @@ export default function LanguagesSection() {
                 >
                     {/* Label */}
                     <h1 className="text-sm text-[#a7a7a7]">
-                        - Languages & Frameworks
+                        {language === "EN"
+                            ? "- Languages & Frameworks"
+                            : "- Lenguajes y Frameworks"}
                     </h1>
 
                     {/* Title */}
                     <h1 className="mt-3 font-bold">
-                        Some of the languages and frameworks I have worked with
+                        {language === "EN"
+                            ? "Some of the languages and frameworks I have worked with"
+                            : "Algunos de los lenguajes y frameworks con los que he trabajado"}
                     </h1>
                 </div>
             </div>
@@ -46,7 +51,7 @@ export default function LanguagesSection() {
                                 icons.map((Icon, i) => (
                                     <div
                                         key={i}
-                                        className="inline-block text-white hover:scale-110 transition-transform duration-300
+                                        className="inline-block text-white hover:scale-125 transition-transform duration-300
                                             mx-10 max-lg:mx-7"
                                     >
                                         <div

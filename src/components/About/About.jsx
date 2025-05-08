@@ -9,7 +9,7 @@ export default function About({ language }) {
         <div className="relative font-montserrat h-full w-full flex flex-col text-white">
             <NameImage language={language} />
 
-            <LanguagesSection />
+            <LanguagesSection language={language} />
         </div>
     )
 }
