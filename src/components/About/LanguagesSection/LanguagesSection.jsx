@@ -14,7 +14,7 @@ const icons = [
 export default function LanguagesSection() {
     return (
         <div className="w-full flex flex-col">
-            <div className="w-full border-2">
+            <div className="w-full">
                 <div
                     className="flex flex-col
                         p-10 max-lg:p-5 pb-0"
