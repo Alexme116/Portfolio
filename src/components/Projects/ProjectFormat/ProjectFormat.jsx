@@ -1,13 +1,19 @@
 /* eslint-disable react/prop-types */
+import { useInView } from 'react-intersection-observer'
 
 
 export default function ProjectFormat({ language, enTitle, esTitle, techStack, enDescription, esDescription, videoId }) {
+    const { ref, inView } = useInView({
+        triggerOnce: false
+    });
+
     return (
-        <div className="overflow-hidden flex flex-col">
+        <div ref={ref} className="overflow-hidden flex flex-col">
             {/* Title */}
             <h1
-                className="font-bold animate__animated animate__fadeInLeft
-                    text-[48px] max-md:text-[40px]"
+                className={`font-bold
+                    text-[48px] max-md:text-[40px]
+                    ${inView ? 'animate__animated animate__fadeInLeft' : 'opacity-0'}`}
             >
                 {language == "EN"
                     ? <h1>{enTitle}</h1>
@@ -15,8 +21,9 @@ export default function ProjectFormat({ language, enTitle, esTitle, techStack, e
             </h1>
 
             <div
-                className="md:ml-5 flex flex-col gap-5 opacity-0 animate-fadeInDelayed
-                    mt-3 max-lg:mt-2 max-md:mt-1"
+                className={`md:ml-5 flex flex-col gap-5
+                    mt-3 max-lg:mt-2 max-md:mt-1
+                    ${inView ? 'opacity-0 animate-fadeInDelayed' : 'opacity-0'}`}
             >
                 {/* Tech Stack */}
                 <div className="flex flex-col gap-1">
@@ -54,7 +61,10 @@ export default function ProjectFormat({ language, enTitle, esTitle, techStack, e
             </div>
 
             {/* Video */}
-            <div className="w-full mt-10 max-lg:mt-5 aspect-video animate__animated animate__zoomInDown">
+            <div
+                className={`w-full mt-10 max-lg:mt-5 aspect-video
+                    ${inView ? 'animate__animated animate__zoomInDown' : 'opacity-0'}`}
+            >
                 <iframe
                     className="w-full h-full"
                     src={`https://www.youtube.com/embed/${videoId}`}
