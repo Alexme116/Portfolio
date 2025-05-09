@@ -61,17 +61,18 @@ export default function ProjectFormat({ language, enTitle, esTitle, techStack, e
             </div>
 
             {/* Video */}
-            <div
-                className={`w-full mt-10 max-lg:mt-5 aspect-video
-                    ${inView ? 'animate__animated animate__zoomInDown' : 'opacity-0'}`}
-            >
-                <iframe
-                    className="w-full h-full"
-                    src={`https://www.youtube.com/embed/${videoId}`}
-                    title="YouTube video"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                />
+            <div className='w-full flex justify-center'>
+                <div
+                    className={`w-[60%] max-xl:w-[70%] max-lg:w-full mt-10 max-lg:mt-5 aspect-video
+                        ${inView ? 'animate__animated animate__zoomInDown' : 'opacity-0'}`}
+                >
+                    <iframe
+                        className="w-full h-full"
+                        src={`https://www.youtube.com/embed/${videoId}`}
+                        title="YouTube video"
+                        allowFullScreen
+                    />
+                </div>
             </div>
         </div>
     )
