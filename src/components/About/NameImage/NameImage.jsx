@@ -28,11 +28,11 @@ export default function NameImage({ language }) {
                     </div>
 
                     <div className="w-full mt-24 flex items-center gap-3 opacity-0 animate-fadeInDelayed">
-                        <button>
+                        <button onClick={() => window.open("https://linkedin.com/in/alejandro-moncada-espinosa", "_blank")}>
                             <LinkedinIcon w={"20px"} h={"20px"} />
                         </button>
 
-                        <button>
+                        <button onClick={() => window.open("https://github.com/Alexme116", "_blank")}>
                             <GithubIcon w={"20px"} h={"20px"} />
                         </button>
                     </div>

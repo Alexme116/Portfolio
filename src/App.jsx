@@ -19,7 +19,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home language={language} />}/>
           <Route path="/about" element={<About language={language} />}/>
-          <Route path="/projects" element={<Projects/>}/>
+          <Route path="/projects" element={<Projects language={language} />}/>
           <Route path="/contact" element={<Contact/>}/>
         </Routes>
       </div>
